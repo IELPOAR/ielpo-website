@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <!-- SEO ESSENTIAL -->
+    <title>IELPO - Ingeniería en Automatización Industrial | Servicio Técnico Pantógrafos Plasma y Oxicorte</title>
+    <meta name="description" content="Ingeniero especializado en automatización industrial, servicio técnico de pantógrafos corte plasma y oxicorte. Representante oficial de American Torch Tip USA y Elco Elettronica Italia. Repuestos originales y asesoramiento técnico.">
+    <meta name="keywords" content="automatización industrial, corte plasma, oxicorte, pantógrafos, servicio técnico, American Torch Tip, Elco Elettronica, ingeniería eléctrica, consumibles soldadura, controles numéricos CNC, reparación máquinas corte, mantenimiento industrial">
+    <meta name="author" content="IELPO Ingeniería">
+    <meta name="robots" content="index, follow">
+    
+    <!-- OPEN GRAPH (Para redes sociales) -->
+    <meta property="og:title" content="IELPO - Ingeniería en Automatización Industrial">
+    <meta property="og:description" content="Especialistas en servicio técnico de pantógrafos plasma y oxicorte. Representante American Torch Tip y Elco Elettronica.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ielpo.com.ar">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 0.5rem 0; /* 👈 REDUCIDO */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 70px; /* 👈 AGREGADO */
+        }
+
+                /* 👇 ESTILOS NUEVOS PARA LOGO - AGREGALOS AL FINAL */
+        .logo-img {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 45px;
+            }
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094794329-cd6d5d3e5d56?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0 100px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e67e22;
+        }
+
+        /* Servicios */
+        .servicios {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .servicio-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #3498db;
+        }
+        
+        /* Estilos mejorados para Productos */
+        .productos {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        margin-top: 2rem;
+        }
+
+        .producto-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grupo-1 {
+            border-top: 4px solid #e74c3c; /* Rojo para USA */
+        }
+
+        .grupo-2 {
+            border-top: 4px solid #3498db; /* Azul para Italia */
+        }
+
+        .grupo-servicios {
+            border-top: 4px solid #f39c12; /* Naranja para servicios */
+        }
+
+        .producto-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .producto-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .producto-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        .producto-subtitle {
+            color: #7f8c8d;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .producto-lista h4 {
+            color: #2c3e50;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        .producto-features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .producto-features li {
+            padding: 0.4rem 0;
+            color: #555;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .producto-features li:last-child {
+            border-bottom: none;
+        }
+
+        .producto-features strong {
+            color: #2c3e50;
+        }
+
+        .producto-marca {
+            margin-top: auto;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+
+        .marca-tag {
+            background: #ecf0f1;
+            color: #7f8c8d;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .productos-grid {
+                grid-template-columns: 1fr;
+            }
+    
+            .producto-card {
+                padding: 1.5rem;
+            }
+        }     
+
+        /* Estilos para logos de fabricantes */
+        .fabricante-logo {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .logo-fabricante {
+            max-height: 60px;
+            width: auto;
+            max-width: 200px;
+            filter: grayscale(0%);
+            transition: filter 0.3s ease;
+        }
+
+        .logo-fabricante:hover {
+            filter: grayscale(0%) brightness(1.1);
+        }
+
+        /* Ajustes para cards con logos */
+        .producto-card h3 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Versión temporal sin logos */
+        .fabricante-placeholder {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 8px;
+            border: 2px dashed #dee2e6;
+        }
+
+        .fabricante-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .fabricante-country {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Estilos para productos internacionales */
+        .productos-internacionales {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .grupo-china {
+            border-top: 4px solid #27ae60; /* Verde para productos chinos */
+            position: relative;
+        }
+
+        .ventaja-precio {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .precio-tag {
+            background: #27ae60;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Destacar ventajas competitivas */
+        .ventajas-china {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .ventajas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .ventaja-item {
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+            <img src="images/IELPOlogo2.jpg" alt="IELPO - Ingeniería en Electrónica de Potencia" class="logo-img">
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Servicio Técnico Especializado en Pantógrafos de Corte Plasma y Oxicorte</h1>
+            <p class="hero-subtitle">Ingeniería en automatización industrial - Representante de American Torch Tip USA y Elco Elettronica Italia</p>
+            <a href="#contacto" class="btn">Consultar Servicio Técnico</a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <h3>Servicio Técnico Pantógrafos</h3>
+                    <p>Como <strong>ingeniero especializado en automatización industrial</strong>, <strong>servicio técnico especializado</strong> para pantógrafos de <strong>corte plasma y oxicorte</strong>. Reparación, mantenimiento y calibración de equipos de corte industrial.</p>
+                </div>
+                <div class="servicio-card">
+                    <h3>Automatización Industrial</h3>
+                    <p>Diseño e implementación de sistemas de <strong>automatización industrial</strong>, controles CNC y PLC, interfaces HMI y sistemas SCADA para optimización de procesos productivos.</p>
+                </div>
+                <div class="servicio-card">
+                    <h3>Asesoramiento Técnico</h3>
+                    <p>Consultoría especializada en sistemas de corte y automatización industrial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Sección Productos -->
+        <section class="productos" id="productos">
+        <div class="container">
+        <h2 class="section-title">Productos</h2>
+        <div class="productos-grid">
+            <!-- Grupo 1 - American Torch Tip -->
+            <div class="producto-card grupo-1">
+                    <div class="fabricante-logo">
+                    <img src="images/attc-logo.jpg" alt="American Torch Tip USA" class="logo-fabricante">
+                    </div>
+                <h3>Consumibles de Alta Calidad</h3>
+                <div class="producto-lista">
+                    <h4>Líneas de Productos:</h4>
+                    <ul class="producto-features">
+                        <li>• <strong>Corte Plasma:</strong> Boquillas, electrodos, protectores</li>
+                        <li>• <strong>Soldadura MIG:</strong> Difusores, boquillas, torchas</li>
+                        <li>• <strong>Soldadura TIG:</strong> Portaelectrodos, boquillas gas</li>
+                        <li>• <strong>Oxicorte:</strong> Boquilas de todas las marcas</li>
+                        <li>• <strong>Thermal Spray:</strong> Componentes especializados</li>
+                    </ul>
+                </div>
+                <div class="producto-marca">
+                    <span class="marca-tag">Fabricante: American Torch Tip (USA)</span>
+                </div>
+            </div>
+
+            <!-- Grupo 2 - Elco Elettronica -->
+            <div class="producto-card grupo-2">
+                    <div class="fabricante-logo">
+                    <img src="images/elco-logo.jpg" alt="Elco Elettronica Italia" class="logo-fabricante">
+                </div>
+                <h3>Controles Numéricos y Accesorios</h3>
+                <div class="producto-lista">
+                    <h4>Líneas de Productos:</h4>
+                    <ul class="producto-features">
+                        <li>• <strong>Controles Numéricos:</strong> CNC para máquinas herramienta</li>
+                        <li>• <strong>Drivers y Motores:</strong> Servomotores, steps, drivers</li>
+                        <li>• <strong>Interfaz Operador:</strong> Paneles HMI, displays</li>
+                        <li>• <strong>Sensores:</strong> Encoders, finales de carrera</li>
+                        <li>• <strong>Accesorios CNC:</strong> Fuentes, interfaces, cables</li>
+                    </ul>
+                </div>
+                <div class="producto-marca">
+                    <span class="marca-tag">Fabricante: Elco Elettronica (Italia)</span>
+                </div>
+            </div>
+
+            <!-- Servicios Técnicos -->
+            <div class="producto-card grupo-servicios">
+                <div class="producto-icon">🔧</div>
+                <h3>Servicios Técnicos Especializados</h3>
+                <p class="producto-subtitle">Soporte y Mantenimiento</p>
+                <div class="producto-lista">
+                    <h4>Nuestros Servicios:</h4>
+                    <ul class="producto-features">
+                        <li>• Servicio técnico pantógrafos corte plasma/oxicorte</li>
+                        <li>• Calibración y puesta a punto de equipos</li>
+                        <li>• Asesoramiento técnico especializado</li>
+                        <li>• Mantenimiento preventivo y correctivo</li>
+                        <li>• Venta de repuestos originales</li>
+                    </ul>
+                </div>
+                <div class="producto-marca">
+                    <span class="marca-tag">Servicio IELPO</span>
+                </div>
+            </div>
+
+                        <!-- Producto China 1 -->
+            <div class="producto-card grupo-china">
+                <div class="fabricante-logo">
+                    <!-- Logo fabricante chino -->
+                    <div class="fabricante-placeholder">
+                        <div class="fabricante-name">Tecnología China</div>
+                        <div class="fabricante-country">Calidad Certificada</div>
+                    </div>
+                </div>
+                <h3>Sistemas de Corte por Plasma</h3>
+                <div class="producto-lista">
+                    <h4>Equipos Completos y Componentes:</h4>
+                    <ul class="producto-features">
+                        <li>• Máquinas de corte plasma CNC</li>
+                        <li>• Fuentes de poder industriales</li>
+                    </ul>
+                </div>
+                <div class="ventaja-precio">
+                    <span class="precio-tag">Precio Competitivo</span>
+                </div>
+            </div>
+
+            <!-- Producto China 3 -->
+            <div class="producto-card grupo-china">
+                <div class="fabricante-logo">
+                    <div class="fabricante-placeholder">
+                        <div class="fabricante-name">Industria China</div>
+                        <div class="fabricante-country">Garantía Internacional</div>
+                    </div>
+                </div>
+                <h3>Componentes de Automatización</h3>
+                <div class="producto-lista">
+                    <h4>Soluciones de Control y Potencia:</h4>
+                    <ul class="producto-features">
+                        <li>• Servomotores y drivers</li>
+                        <li>• Controladores CNC y PLC</li>
+                        <li>• Sensores industriales</li>
+                        <li>• Control de Altura para Plasma THC</li>
+                        <li>• Interfaces HMI táctiles</li>
+                    </ul>
+                </div>
+                <div class="ventaja-precio">
+                    <span class="precio-tag">Tecnología Confiable</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <h3>Contacto</h3>
+            <p>Email: ielpo.net@outlook.com</p>
+            <p>Teléfono: +54 9 341 721 9938</p>
+            <p>Rosario. Santa Fe. Argentina</p>
+            <p>&copy; 2024 IELPO - Todos los derechos reservados</p>
+        </div>
+    </footer>
+   
+        <!-- Schema.org para negocio local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "IELPO - Ingeniería en Automatización",
+      "description": "Servicio técnico especializado en pantógrafos de corte plasma y oxicorte",
+      "url": "https://ielpo.com.ar",
+      "telephone": "+54-9-341-721-9938",
+      "email": "info@ielpo.com.ar",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rosario. Santa Fe. Argentina",
+        "addressCountry": "AR"
+      },
+      "serviceType": [
+        "Servicio técnico industrial",
+        "Automatización industrial", 
+        "Venta de repuestos originales",
+        "Mantenimiento de pantógrafos"
+      ],
+      "areaServed": "Argentina"
+    }
+    </script>
+
+</body>
+</html>
